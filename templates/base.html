@@ -1,0 +1,52 @@
+<!-- NOTE this comment is base for documenting-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Management System</title>
+    
+    <!-- Bootstrap CSS: handles styling, layout, colors, spacing, buttons, etc. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for small tweaks like background color or card shadows -->
+    <style>
+        body {
+            background-color: #f8f9fa !important; 
+        }
+        .navbar-brand {
+            font-weight: bold !important; 
+        }
+        .card {
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1) !important; /* subtle shadow for card elements */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar at the top of the page -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container d-flex align-items-center">
+            <!-- Confetti icon on the left side of navbar -->
+            <img src="{{ url_for('static', filename='icons/event_pic.svg') }}" 
+                 alt="Confetti Icon" width="50" height="50" class="me-2">
+            
+            <!-- Brand name / logo -->
+            <a class="navbar-brand" href="{{ url_for('index') }}">Event Manager</a>
+            
+            <!-- Right side buttons (Home & Create Event) -->
+            <div class="ms-auto">
+                <a href="{{ url_for('index') }}" class="me-2" style="text-decoration: none; color: white; font-weight: bold;">Home</a>
+            <!--<a href="{{ url_for('create_event') }}" class="btn btn-success btn-sm">Create Event</a>-->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Jinja block: this is where other pages will inject their content -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS bundle: makes interactive components like dropdowns, modals, navbar toggles work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

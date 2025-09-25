@@ -1,0 +1,68 @@
+EVENT SYSTEM APP – DOCUMENTATION
+
+1. Project Files:
+event_system/
+│
+├─ server.py           # Flask backend
+├─ client.py           # Optional Python client for API testing
+├─ requirements.txt    # Python dependencies
+├─ static/icons        # For imported icons/svg
+├─ instance/
+│   └─ event_system.db # SQLite database (auto-generated)
+└─ templates/          # HTML templates for UI using bootstrap read docs here "https://getbootstrap.com/"
+
+2. Install Python:
+    - Make sure latest Python is installed.
+    - Verify with:
+    python --version
+
+3. Install Dependencies:
+
+    1. Open terminal anywhere on your system.
+    2. Navigate to your project folder using `cd`. For example the developer's project:
+        cd C:\CODEONLY\ITD104\event_system
+    3. Run:
+        pip install -r requirements.txt
+    - This installs all necessary packages: Flask, Flask-SQLAlchemy, requests, etc.
+
+4. Run the Backend Server:
+
+    1. In terminal, navigate to the project folder. For example:
+        You can should see C:\(folder)\(folder)\event_system
+    2. Start the server:
+        python server.py
+    3. You should see:
+        * Running on http://127.0.0.1:5000/ (Press CTRL+C to stop the server)
+
+5. Access the App in Browser:
+
+    - Open your browser and go to:
+        http://127.0.0.1:5000/
+    - You can now:
+        - View events
+        - Create new events
+        - Register students
+        - View registrations
+        - Delete events
+
+6. Optional: Use the Client:
+
+    - Run in another terminal:
+        python client.py
+    - This performs sample API requests for testing.
+
+7. Database:
+
+    - SQLite database file is at:
+        instance/event_system.db
+    - Use a SQLite viewer if you want to check or clear data.
+
+8. Stop the Server:
+
+    - Press CTRL + C in the terminal running server.py.
+
+    Tips:
+        - Always run `server.py` before opening the browser.
+        - If you add new packages, update `requirements.txt`:
+            pip freeze > requirements.txt
+        - Template changes reflect immediately when the server reloads.
