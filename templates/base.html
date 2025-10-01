@@ -25,17 +25,16 @@
     <!-- Navbar at the top of the page -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div class="container d-flex align-items-center">
-            <!-- Confetti icon on the left side of navbar -->
+            <!-- Event icon on the left side of navbar -->
             <img src="{{ url_for('static', filename='icons/event_pic.svg') }}" 
                  alt="Confetti Icon" width="50" height="50" class="me-2">
             
             <!-- Brand name / logo -->
             <a class="navbar-brand" href="{{ url_for('index') }}">Event Manager</a>
             
-            <!-- Right side buttons (Home & Create Event) -->
+            <!-- Right side buttons (Home) -->
             <div class="ms-auto">
                 <a href="{{ url_for('index') }}" class="me-2" style="text-decoration: none; color: white; font-weight: bold;">Home</a>
-            <!--<a href="{{ url_for('create_event') }}" class="btn btn-success btn-sm">Create Event</a>-->
             </div>
         </div>
     </nav>

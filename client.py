@@ -1,6 +1,6 @@
 import requests
 
-server_url = 'http://127.0.0.1:5000/api'
+server_url = 'https://35bk4c0x-5000.asse.devtunnels.ms/'
 
 def create_event(event_name, event_date):
     event = {'name': event_name, 'date': event_date}

@@ -49,6 +49,7 @@ def create_event_web():
         return redirect(url_for('index'))
     return render_template('create_event.html')
 
+# Call events in index method
 @app.route('/events/<int:event_id>/register', methods=['GET', 'POST'])
 def register_student_web(event_id):
     event = Event.query.get_or_404(event_id)
@@ -87,6 +88,7 @@ def list_events():
     event_list = [{'id': e.id, 'name': e.name, 'date': e.date} for e in events]
     return jsonify(event_list), 200
 
+#Postman testing or client.py
 @app.route('/api/events/<int:event_id>/register', methods=['POST'])
 def register_student(event_id):
     event = Event.query.get(event_id)
